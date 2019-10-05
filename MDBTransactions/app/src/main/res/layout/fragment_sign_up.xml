@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/signUpSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#F3F0F0"
+            android:paddingLeft="32dp"
+            android:paddingTop="16dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="16dp"
+            android:text="Sign Up"
+            android:textColor="#337AE5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/signUpSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/errorSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#E4C24343"
+                android:textSize="18sp"
+                tools:text="Error Message for Signing Up" />
+
+            <EditText
+                android:id="@+id/nameSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Name"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textVisiblePassword|textFilter|textNoSuggestions"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <EditText
+                android:id="@+id/emailSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Email"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textVisiblePassword|textFilter|textNoSuggestions"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <EditText
+                android:id="@+id/passwordSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <EditText
+                android:id="@+id/passwordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

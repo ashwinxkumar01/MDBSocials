@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addPurchaseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPurchaseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/supplierIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addPurchaseDate"
+                app:layout_constraintStart_toStartOf="@+id/addPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseCost"
+                app:srcCompat="@drawable/calendar" />
+
+            <EditText
+                android:id="@+id/addPurchaseSupplier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:editable="true"
+                android:ems="10"
+                android:hint="Supplier"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textPersonName|textCapWords"
+                app:layout_constraintEnd_toEndOf="@+id/addPurchaseCost"
+                app:layout_constraintStart_toEndOf="@+id/dateIcon"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseDate" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#F3F0F0"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="@android:string/cancel"
+                android:textColor="#337AE5"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/addPurchasePhoto"
+                app:layout_constraintStart_toStartOf="@+id/addPurchasePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchasePhoto" />
+
+            <Button
+                android:id="@+id/addPurchaseSave"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#F3F0F0"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="Save"
+                android:textColor="#337AE5"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cancelButton"
+                app:layout_constraintEnd_toEndOf="@+id/addPhotoButton"
+                app:layout_constraintStart_toStartOf="@+id/addPhotoButton"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchasePhoto"
+                app:layout_constraintTop_toTopOf="@+id/cancelButton" />
+
+            <EditText
+                android:id="@+id/addPurchaseDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="7"
+                android:minLines="7"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/addPurchaseName"
+                app:layout_constraintStart_toStartOf="@+id/addPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseSupplier" />
+
+            <EditText
+                android:id="@+id/addPurchaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Date Purchased (Required)"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="@+id/addPurchaseCost"
+                app:layout_constraintStart_toEndOf="@+id/dateIcon"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseCost" />
+
+            <EditText
+                android:id="@+id/addPurchaseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="Item Title (Required)"
+                android:inputType="textPersonName|textCapSentences"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseTitle" />
+
+            <ImageButton
+                android:id="@+id/addPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circle_button"
+                android:padding="48dp"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_input_add"
+                android:textAlignment="center"
+                android:tint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/addPurchasePhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/addPurchasePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseDesc" />
+
+            <ImageView
+                android:id="@+id/dateIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addPurchaseSupplier"
+                app:layout_constraintStart_toStartOf="@+id/addPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseDate"
+                app:srcCompat="@drawable/supplier" />
+
+            <ImageView
+                android:id="@+id/addPurchasePhoto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/addPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseDesc"
+                app:srcCompat="@drawable/placeholder" />
+
+            <ImageView
+                android:id="@+id/moneyIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addPurchaseCost"
+                app:layout_constraintStart_toStartOf="@+id/addPurchaseName"
+                app:layout_constraintTop_toTopOf="@+id/addPurchaseCost"
+                app:srcCompat="@drawable/money" />
+
+            <TextView
+                android:id="@+id/addPurchaseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:importantForAutofill="noExcludeDescendants"
+                android:text="Add New Purchase"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.imranandashwin.mdbtransactions.CurrencyEditText
+                android:id="@+id/addPurchaseCost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:hint="ItemCost"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/addPurchaseName"
+                app:layout_constraintStart_toEndOf="@+id/moneyIcon"
+                app:layout_constraintTop_toBottomOf="@+id/addPurchaseName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

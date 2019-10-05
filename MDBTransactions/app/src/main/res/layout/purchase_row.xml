@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/purchaseCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/rowSupplierIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/purchaseDate"
+        app:layout_constraintTop_toTopOf="@+id/purchaseDate"
+        app:srcCompat="@drawable/supplier" />
+
+    <TextView
+        android:id="@+id/rowSupplierName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rowSupplierIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rowSupplierIcon"
+        app:layout_constraintTop_toTopOf="@+id/rowSupplierIcon"
+        tools:text="Supplier Name" />
+
+    <TextView
+        android:id="@+id/purchaseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Purchase Name" />
+
+    <TextView
+        android:id="@+id/purchaseCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/moneyIcon"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseName"
+        tools:text="$0.00" />
+
+    <TextView
+        android:id="@+id/purchaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/calendarIcon"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseName"
+        tools:text="01/01/1970" />
+
+    <TextView
+        android:id="@+id/purchaserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/authorIcon"
+        app:layout_constraintStart_toEndOf="@+id/authorIcon"
+        app:layout_constraintTop_toTopOf="@+id/authorIcon"
+        tools:text="MDB Member" />
+
+    <ImageView
+        android:id="@+id/purchasePhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Purchase Item Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintStart_toStartOf="@+id/authorIcon"
+        app:layout_constraintTop_toBottomOf="@+id/purchaserName"
+        app:srcCompat="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/purchaseDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/purchasePhoto"
+        app:layout_constraintTop_toTopOf="@+id/purchasePhoto"
+        tools:text="Here is a short description of the item that was purchased. Filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler, filler. This is the end of the description and might be cut off by the app." />
+
+    <ImageView
+        android:id="@+id/authorIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/purchaseName"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseCost"
+        app:srcCompat="@drawable/author" />
+
+    <ImageView
+        android:id="@+id/calendarIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/purchaseDate"
+        app:layout_constraintStart_toEndOf="@+id/purchaseCost"
+        app:layout_constraintTop_toTopOf="@+id/purchaseDate"
+        app:srcCompat="@drawable/calendar" />
+
+    <ImageView
+        android:id="@+id/moneyIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/purchaseCost"
+        app:layout_constraintStart_toStartOf="@+id/purchaseName"
+        app:layout_constraintTop_toTopOf="@+id/purchaseCost"
+        app:srcCompat="@drawable/money" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

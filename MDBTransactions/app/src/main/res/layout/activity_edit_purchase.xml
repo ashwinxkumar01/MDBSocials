@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editPurchaseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPurchaseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/editSupplierIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editPurchaseDate"
+                app:layout_constraintStart_toStartOf="@+id/editPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseCost"
+                app:srcCompat="@drawable/calendar" />
+
+            <EditText
+                android:id="@+id/editPurchaseSupplier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:editable="true"
+                android:ems="10"
+                android:hint="Supplier"
+                android:inputType="textPersonName|textCapWords"
+                android:importantForAutofill="noExcludeDescendants"
+                app:layout_constraintEnd_toEndOf="@+id/editPurchaseCost"
+                app:layout_constraintStart_toEndOf="@+id/editDateIcon"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseDate" />
+
+            <Button
+                android:id="@+id/editCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#F3F0F0"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="@android:string/cancel"
+                android:textColor="#337AE5"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editPurchasePhoto"
+                app:layout_constraintStart_toStartOf="@+id/editPurchasePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchasePhoto" />
+
+            <Button
+                android:id="@+id/editPurchaseSave"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#F3F0F0"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="Save"
+                android:textColor="#337AE5"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editCancelButton"
+                app:layout_constraintEnd_toEndOf="@+id/editPhotoButton"
+                app:layout_constraintStart_toStartOf="@+id/editPhotoButton"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchasePhoto"
+                app:layout_constraintTop_toTopOf="@+id/editCancelButton" />
+
+            <EditText
+                android:id="@+id/editPurchaseDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="7"
+                android:minLines="7"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/editPurchaseName"
+                app:layout_constraintStart_toStartOf="@+id/editPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseSupplier" />
+
+            <EditText
+                android:id="@+id/editPurchaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Date Purchased (Required)"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="@+id/editPurchaseCost"
+                app:layout_constraintStart_toEndOf="@+id/editDateIcon"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseCost" />
+
+            <EditText
+                android:id="@+id/editPurchaseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="Item Title (Required)"
+                android:inputType="textPersonName|textCapSentences"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseTitle" />
+
+            <ImageButton
+                android:id="@+id/editPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circle_button"
+                android:padding="48dp"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_input_add"
+                android:textAlignment="center"
+                android:tint="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/editPurchasePhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editPurchasePhoto"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseDesc" />
+
+            <ImageView
+                android:id="@+id/editDateIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editPurchaseSupplier"
+                app:layout_constraintStart_toStartOf="@+id/editPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseDate"
+                app:srcCompat="@drawable/supplier" />
+
+            <ImageView
+                android:id="@+id/editPurchasePhoto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/editPurchaseName"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseDesc"
+                app:srcCompat="@drawable/placeholder" />
+
+            <ImageView
+                android:id="@+id/editMoneyIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editPurchaseCost"
+                app:layout_constraintStart_toStartOf="@+id/editPurchaseName"
+                app:layout_constraintTop_toTopOf="@+id/editPurchaseCost"
+                app:srcCompat="@drawable/money" />
+
+            <TextView
+                android:id="@+id/editPurchaseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:importantForAutofill="noExcludeDescendants"
+                android:text="Edit Purchase"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.imranandashwin.mdbtransactions.CurrencyEditText
+                android:id="@+id/editPurchaseCost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:ems="10"
+                android:hint="ItemCost"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/editPurchaseName"
+                app:layout_constraintStart_toEndOf="@+id/editMoneyIcon"
+                app:layout_constraintTop_toBottomOf="@+id/editPurchaseName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
